@@ -26,7 +26,9 @@ jobs:
       
       # build system images
       - name: Build system images
-        run: julia sysimage_plots.jl
+        run: |
+          julia -e "import Pkg; Pkg.add("PackageCompiler", "Plots")"
+          julia sysimage_plots.jl
 
       # Runs a single command using the runners shell
 #       - name: Run a one-line script
