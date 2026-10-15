@@ -3,7 +3,7 @@ sysimage_path = joinpath(dirname(@__FILE__), "sys-etc.so")
 precompile_file = joinpath(dirname(@__FILE__), "precompile.jl")
 
 create_sysimage(
-    ["OhMyREPL", "Revise"];
+    ["Revise"];
     sysimage_path,
 )
 
